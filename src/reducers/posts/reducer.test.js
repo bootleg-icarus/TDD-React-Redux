@@ -1,4 +1,4 @@
-import { types } from "../../actions/types";
+import { Types } from "../../actions/types";
 import postReducer from "./reducer";
 import expectExport from "expect";
 
@@ -15,7 +15,7 @@ describe("posts reducer", () => {
       { title: "Test 3" }
     ];
     const newState = postReducer(undefined, {
-      type: types.GET_POSTS,
+      type: Types.GET_POSTS,
       payload: posts
     });
     expect(newState).toEqual(posts);
